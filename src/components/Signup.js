@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Login from "./Login";
+import { Link } from "react-router-dom"
 
 const Signup = () => {
   const [success, setSuccess] = useState(false);
@@ -12,9 +14,7 @@ const Signup = () => {
      {success ? (
         <section>
           <h1>Success!</h1>
-          <p>
-            <a href="#">Sign In</a>
-          </p>
+          <Login />
         </section>
       ) : (
         <section>
@@ -34,7 +34,7 @@ const Signup = () => {
               Already registered?<br />
               <span className="line">
                 {/*put router link here*/}
-                <a href="#">Sign In</a>
+                <Link to="/login" exact>Link In</Link>
               </span>
             </p>
         </section>
