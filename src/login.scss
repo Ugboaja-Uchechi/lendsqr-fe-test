@@ -19,7 +19,6 @@ body {
   height: 100vh;
 
     .img-container {
-      // margin-inline-start: 4.1rem;
       background-color: $background-color;
       border-right: 1px solid $background-color;
     }
@@ -45,8 +44,6 @@ body {
     }
 
     h1 {
-      // position: absolute;
-      // bottom: 10.1rem;
       font-size: calc(1.5rem + 1vw);
       color: $welcome-color;
       font-weight: 700;
@@ -58,7 +55,6 @@ body {
       color: $paragraph-color;
       font-weight: $font-weight;
       margin-block-start: 0.625rem;
-      // margin-block-end: 3rem;
     }
 
     form {

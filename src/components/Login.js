@@ -1,20 +1,7 @@
 import { useState } from "react";
 import Logo from "../assests/images/logo.svg";
 import Signin from "../assests/images/sign-in-img.svg";
-import Dashboard from "./Dashboard";
-import { Route, Routes } from 'react-router-dom';
 import "../login.scss"
-// import PropTypes from 'prop-types';
-
-// const loginUser = async (credentials) => {
-//   return fetch('http://localhost:8080/login', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify(credentials)
-//   }).then (data => data.json())
-// }
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -52,9 +39,5 @@ const Login = () => {
     </>
   )
 }
-
-// Login.propTypes = {
-//   setToken: PropTypes.func.isRequired
-// }
 
 export default Login;
