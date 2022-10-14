@@ -1,16 +1,17 @@
-import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import Login from './components/Login';
-import Signup from './components/Signup';
+// import Signup from './components/Signup';
+import User from './components/User';
 
 const App = () => {
   return (
     <>
       <Routes>
         <Route exact path="/" element={<Dashboard />} />
-        <Route exact path="/signup" element={<Signup />} />
+        {/* <Route exact path="/signup" element={<Signup />} /> */}
         <Route exact path="/login" element={<Login />} />
+        <Route exact path="/user" element={<User />} />
       </Routes>
     </>
   );
