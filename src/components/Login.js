@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "../assests/images/logo.svg";
 import Signin from "../assests/images/sign-in-img.svg";
-import "../login.scss"
+import "../Styling/_login.scss"
 
 const Login = () => {
   const [email, setEmail] = useState("");
