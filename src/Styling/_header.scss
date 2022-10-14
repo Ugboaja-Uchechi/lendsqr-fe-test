@@ -16,7 +16,7 @@ header {
     .logo {
       margin-inline-start: 1.8rem;
       height: 2.5rem;
-      width: 10.86rem;
+      width: calc(100% - 30px);
     }
 
     .grid {
@@ -24,7 +24,7 @@ header {
     }
 
     input {
-      margin-inline-start: 10.5rem;
+      margin-inline-start: calc(10px + 100px);
       font-family: 'Work Sans', sans-serif;
       font-weight: 400;
       width: calc(20rem + 5.25vw);
