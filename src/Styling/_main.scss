@@ -1,0 +1,51 @@
+$primary-text-color: #213F7D;
+$secondary-text-color: #545F7D;
+$small-font: calc(0.4rem + 0.5vw);
+$large-font: calc(0.5rem + 0.8vw);
+
+main {
+  width: calc(16.5em * 5);
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+
+    h1 {
+      color: $primary-text-color;
+      font-size: $large-font;
+      margin-block-start: 3.7rem;
+      margin-block-end: 2.5rem;
+      margin-inline-start: 3.7rem;
+    }
+
+    .user-info {
+      display: flex;
+      margin-inline-start: 3.7rem;
+    }
+
+    .info-cover {
+      background-color: #fff;
+      width: calc(20% - 20px);
+      padding-inline-start: 1.5rem;
+      margin-inline-end: 1.6rem;
+    }
+
+    img {
+      margin-block-start: 1rem;
+      width: calc(35% - 30px);
+    }
+
+    h2 {
+      font-size: $small-font;
+      color: $secondary-text-color;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-block-end: 0;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: $large-font;
+      color: $primary-text-color;
+      margin-block-start: 0.5rem;
+    }
+}

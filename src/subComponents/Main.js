@@ -1,4 +1,5 @@
 import UserInfo from "../Data/UsersInfo";
+import "../Styling/_main.scss"
 
 const Main = () => {
   return (
@@ -7,11 +8,11 @@ const Main = () => {
         <div>
           <h1>Users</h1>
         </div>
-        <div>
+        <div className="user-info">
           {
             UserInfo.map(data => {
               return (
-                <div>
+                <div className="info-cover">
                   <img src={data.img} alt={data.alt} />
                   <h2>{data.title}</h2>
                   <h3>{data.num}</h3>
