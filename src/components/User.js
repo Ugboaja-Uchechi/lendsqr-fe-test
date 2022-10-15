@@ -1,11 +1,16 @@
 import Header from "../subComponents/Header";
+import Main from "../subComponents/Main";
 import SideBar from "../subComponents/sideBar";
+
 
 const User = () => {
   return (
     <>
       <Header />
-      <SideBar />
+      <div style={{ display: "flex" }}>
+        <SideBar />
+        <Main />
+      </div>
     </>
   )
 }

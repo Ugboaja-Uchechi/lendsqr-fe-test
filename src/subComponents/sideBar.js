@@ -6,7 +6,7 @@ import "../Styling/_sideBar.scss"
 const SideBar = () => {
   return (
     <>
-      <section>
+      <section className="side-bar">
         <div className="flex p-top">
           <div>
             <img src={Briefcase} alt="A briefcase icon" className="img" />

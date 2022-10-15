@@ -5,8 +5,8 @@ $secondary-font-weight: 500;
 $font-weight: 400;
 $font-size: 1rem;
 
-section {
-  width: 20vw;
+.side-bar {
+  width: calc(3.5em * 5);
   background-color: #fff;
   box-shadow: 3px 0px 20px 0px #0000000A;
 
