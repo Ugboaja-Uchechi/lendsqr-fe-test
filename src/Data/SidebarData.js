@@ -23,117 +23,108 @@ const SidebarData = [
   {
     id: 1,
     img: Home,
-    name: "Dashboard"
-  },
-  {
-    id: 2,
+    name: "Dashboard",
     header: "Customers"
   },
   {
-    id: 3,
+    id: 2,
     img: UserFriends,
     name: "Users"
   },
   {
-    id: 4,
+    id: 3,
     img: User,
     name: "Guarantors"
   },
   {
-    id: 5,
+    id: 4,
     img: Sack,
     name: "Loans"
   },
   {
-    id: 6,
+    id: 5,
     img: HandShake,
     name: "Decision Models"
   },
   {
-    id: 7,
+    id: 6,
     img: PiggyBank,
     name: "Savings"
   },
   {
-    id: 8,
+    id: 7,
     img: Loan,
     name: "Loan Requests"
   },
   {
-    id: 9,
+    id: 8,
     img: Whitelist,
     name: "Whitelist"
   },
   {
-    id: 10,
+    id: 9,
     img: Karma,
-    name: "Karma"
-  },
-  {
-    id: 11,
+    name: "Karma",
     header: "Businesses"
   },
   {
-    id: 12,
+    id: 10,
     img: Briefcase,
     name: "Organisation"
   },
   {
-    id: 13,
+    id: 11,
     img: Loan,
     name: "Loan Products"
   },
   {
-    id: 14,
+    id: 12,
     img: Bank,
     name: "Savings Products"
   },
   {
-    id: 15,
+    id: 13,
     img: Coins,
     name: "Fees and Charges"
   },
   {
-    id: 16,
+    id: 14,
     img: Transaction,
     name: "Transactions"
   },
   {
-    id: 17,
+    id: 15,
     img: Service,
     name: "Services"
   },
   {
-    id: 18,
+    id: 16,
     img: UserCog,
     name: "Service Account"
   },
   {
-    id: 19,
+    id: 17,
     img: Scroll,
     name: "Settlement"
   },
   {
-    id: 20,
+    id: 18,
     img: Chart,
-    name: "Reports"
-  },
-  {
-    id: 21,
+    name: "Reports",
     header: "Settings"
   },
   {
-    id: 22,
+    id: 19,
     img: Sliders,
     name: "Preferences"
   },
   {
-    id: 23,
+    id: 20,
     img: Fees,
     name: "Fees and Pricing"
   },
   {
-    id: 24,
+    id: 21,
     img: Clipboard,
     name: "Audit Logs"
   },
