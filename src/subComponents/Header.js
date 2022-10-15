@@ -6,6 +6,7 @@ import { MdArrowDropDown } from "react-icons/md";
 import "../Styling/_header.scss"
 
 const Header = () => {
+  
   return (
     <>
       <header>

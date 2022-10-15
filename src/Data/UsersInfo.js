@@ -2,6 +2,7 @@ import PinkUser from "../assests/images/pink-user.svg";
 import PurpleUser from "../assests/images/purple-user.svg";
 import Docs from "../assests/images/docs.png";
 import Savings from "../assests/images/savings.svg";
+import Filter from "../assests/images/filter-results.svg"
 
 const UserInfo = [
   {
@@ -31,4 +32,37 @@ const UserInfo = [
   },
 ];
 
-export default UserInfo;
+const Title = [
+  {
+    id: 1,
+    header: "Organization",
+    image: Filter
+  },
+  {
+    id: 2,
+    header: "username",
+    image: Filter
+  },
+  {
+    id: 3,
+    header: "email",
+    image: Filter
+  },
+  {
+    id: 4,
+    header: "phone number",
+    image: Filter
+  },
+  {
+    id: 5,
+    header: "date joined",
+    image: Filter
+  },
+  {
+    id: 6,
+    header: "status",
+    image: Filter
+  },
+];
+
+export { UserInfo, Title };
