@@ -2,9 +2,32 @@ import { Title, UserInfo } from "../Data/UsersInfo";
 import "../Styling/_main.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { HiDotsVertical }from "react-icons/hi"
+import { HiDotsVertical }from "react-icons/hi";
+
+// const DetailPopup = () => {
+//   return (
+//     <>
+//       <p>Details</p>
+//       <p>Active</p>
+//       <p>Block</p>
+//     </>
+//   )
+// }
 
 const Main = () => {
+
+  const [popup, setPopup] = useState(false);
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeTable, setActiveTable] = useState(-1);
+  // const [menuClick, setMenuClick] = useState(false);
+
+  const handleMenuClick = (key) => {
+    setActiveTable(key);
+    setMenuOpen(!menuOpen);
+    // setMenuClick(true);
+  };
+
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -14,6 +37,9 @@ const Main = () => {
       console.log(err)
     })
   }, [])
+  //   const handleClick = () => {
+  //   setPopup(prevState => !prevState)
+  // }
   return (
     <>
       <main>
@@ -33,22 +59,41 @@ const Main = () => {
             })
           }
         </div>
-        <div>
-          <ul>
+        <div className="user-cover">
+          <ul className="title-cover">
           {
             Title.map(item => <li key={item.id}>{item.header}<img src={item.image} alt="Filter icon" /></li>)
           }
           </ul>
             {
-              users.map(user => {
+              users.map((user, key) => {
                 return (
-                  <ul key={user.id}>
+                  <ul className="title-cover">
                     <li>{user.orgName}</li>
                     <li>{user.userName}</li>
                     <li>{user.email}</li>
                     <li>{user.phoneNumber}</li>
                     <li>{user.createdAt}</li>
-                    <li><HiDotsVertical /></li>
+                    <li  open={menuOpen}
+                  handleClick={handleMenuClick}>
+                      <HiDotsVertical onClick={() => handleMenuClick(key)} />
+                      {key === activeTable && (
+                    <div className="tool-tip">
+                      <ul>
+                        <li>
+                          View Details
+                        </li>
+                        <li>
+                          Blacklist User
+                        </li>
+                        <li>
+                          Activate User
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                      {/* {popup ? <DetailPopup /> : ""} */}
+                    </li>
                   </ul>
                 )
               })

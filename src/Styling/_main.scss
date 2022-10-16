@@ -48,4 +48,26 @@ main {
       color: $primary-text-color;
       margin-block-start: 0.5rem;
     }
+
+    .user-cover {
+      background-color: #fff;
+      width: calc(87% - 40px);
+      margin-inline-start: 3.7rem;
+      margin-block-start: 2.5rem;
+      box-shadow: 3px 5px 20px 0px #0000000A;
+    }
+
+    ul {
+      padding-inline-start: 1.5rem;
+    }
+
+    .title-cover {
+      display: flex;
+      align-items: center;
+    }
+
+    li {
+      list-style-type: none;
+      font-size: 0.8rem;
+    }
 }
