@@ -24,7 +24,7 @@ main {
 
     .info-cover {
       background-color: #fff;
-      width: calc(20% - 20px);
+      width: calc(21% - 20px);
       padding-inline-start: 1.5rem;
       margin-inline-end: 1.6rem;
     }
@@ -51,14 +51,42 @@ main {
 
     .user-cover {
       background-color: #fff;
-      width: calc(87% - 40px);
+      width: calc(90% - 40px);
       margin-inline-start: 3.7rem;
       margin-block-start: 2.5rem;
       box-shadow: 3px 5px 20px 0px #0000000A;
     }
 
-    ul {
+    ul, table {
       padding-inline-start: 1.5rem;
+    }
+
+    th {
+      text-align: start;
+      color: $secondary-text-color;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 5px 0;
+      padding-left: 10px;
+    }
+
+    .t-head {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin-inline-end: 0.3rem;
+      }
+    }
+
+    td {
+      border-bottom: 1px solid #213f7d1a;
+      color: $secondary-text-color;
+      text-transform: capitalize;
+      font-size: 0.9rem;
+      font-weight: 400;
+      padding: 5px 10px;
     }
 
     .title-cover {
@@ -66,8 +94,33 @@ main {
       align-items: center;
     }
 
+    .pop-up {
+      position: absolute;
+      width: 160px;
+      padding: 20px 0;
+      right: 9rem;
+      height: auto;
+      background: #fff;
+      border: 1px solid rgba(84, 95, 125, 0.04);
+      box-shadow: 3px 5px 20px rgb(0 0 0 / 4%);
+      border-radius: 4px;
+
+        ul {
+          margin: 0;
+          align-items: center;
+          justify-content: space-evenly;
+          padding: 0;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+    }
+
     li {
       list-style-type: none;
       font-size: 0.8rem;
+      display: flex;
+      gap: 13px;
     }
 }

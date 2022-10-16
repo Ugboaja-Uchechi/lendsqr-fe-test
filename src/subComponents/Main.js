@@ -3,16 +3,9 @@ import "../Styling/_main.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { HiDotsVertical }from "react-icons/hi";
-
-// const DetailPopup = () => {
-//   return (
-//     <>
-//       <p>Details</p>
-//       <p>Active</p>
-//       <p>Block</p>
-//     </>
-//   )
-// }
+import moment from "moment";
+import { BsEye } from "react-icons/bs";
+import { FiUserCheck, FiUserX } from "react-icons/fi";
 
 const Main = () => {
 
@@ -60,44 +53,63 @@ const Main = () => {
           }
         </div>
         <div className="user-cover">
-          <ul className="title-cover">
-          {
-            Title.map(item => <li key={item.id}>{item.header}<img src={item.image} alt="Filter icon" /></li>)
-          }
-          </ul>
+          <table>
+            <thead>
+              <tr>
+            {
+              Title.map(item => {
+                return (
+                  <th key={item.id}>
+                    <div className="t-head">
+                      <p>{item.header}</p>
+                      <img src={item.image} alt="Filter icon" />
+                    </div>
+                  </th>
+                )
+              })
+            }
+            </tr>
+          </thead>
+          
             {
               users.map((user, key) => {
                 return (
-                  <ul className="title-cover">
-                    <li>{user.orgName}</li>
-                    <li>{user.userName}</li>
-                    <li>{user.email}</li>
-                    <li>{user.phoneNumber}</li>
-                    <li>{user.createdAt}</li>
-                    <li  open={menuOpen}
+                  
+                  <tr>
+                    <td>{user.orgName}</td>
+                
+                    <td>{user.userName}</td>
+                    <td>{user.email}</td>
+                    <td>{user.phoneNumber}</td>
+                    <td>{moment(user.createdAt).format("MMMM Do, h:mm a")}</td>
+                    <td className="activity">Inactive</td>
+                    <td  open={menuOpen}
                   handleClick={handleMenuClick}>
                       <HiDotsVertical onClick={() => handleMenuClick(key)} />
                       {key === activeTable && (
-                    <div className="tool-tip">
+                    <div className="pop-up">
                       <ul>
                         <li>
+                          <BsEye />
                           View Details
                         </li>
                         <li>
+                          <FiUserX />
                           Blacklist User
                         </li>
                         <li>
+                          <FiUserCheck />
                           Activate User
                         </li>
                       </ul>
                     </div>
                   )}
-                      {/* {popup ? <DetailPopup /> : ""} */}
-                    </li>
-                  </ul>
+                    </td>
+                  </tr>
                 )
               })
             }
+            </table>
         </div>
       </main>
     </>
