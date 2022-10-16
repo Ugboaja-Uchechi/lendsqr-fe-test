@@ -16,7 +16,7 @@ import { HiDotsVertical }from "react-icons/hi";
 
 const Main = () => {
 
-  const [popup, setPopup] = useState(false);
+  // const [popup, setPopup] = useState(false);
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeTable, setActiveTable] = useState(-1);
