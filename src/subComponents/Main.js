@@ -6,19 +6,16 @@ import { HiDotsVertical }from "react-icons/hi";
 import moment from "moment";
 import { BsEye } from "react-icons/bs";
 import { FiUserCheck, FiUserX } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
 
-  // const [popup, setPopup] = useState(false);
-
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeTable, setActiveTable] = useState(-1);
-  // const [menuClick, setMenuClick] = useState(false);
 
   const handleMenuClick = (key) => {
     setActiveTable(key);
     setMenuOpen(!menuOpen);
-    // setMenuClick(true);
   };
 
   const [users, setUsers] = useState([]);
@@ -29,10 +26,12 @@ const Main = () => {
     }).catch(err => {
       console.log(err)
     })
-  }, [])
-  //   const handleClick = () => {
-  //   setPopup(prevState => !prevState)
-  // }
+  }, []);
+
+  let detailPage = useNavigate();
+  const handleClick = (id) => {
+    detailPage(`/users/${id}`);
+  };
   return (
     <>
       <main>
@@ -70,14 +69,11 @@ const Main = () => {
             }
             </tr>
           </thead>
-          
             {
               users.map((user, key) => {
                 return (
-                  
                   <tr>
                     <td>{user.orgName}</td>
-                
                     <td>{user.userName}</td>
                     <td>{user.email}</td>
                     <td>{user.phoneNumber}</td>
@@ -89,7 +85,7 @@ const Main = () => {
                       {key === activeTable && (
                     <div className="pop-up">
                       <ul>
-                        <li>
+                        <li onClick={() => handleClick(user.id)}>
                           <BsEye />
                           View Details
                         </li>
