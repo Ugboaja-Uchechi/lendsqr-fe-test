@@ -76,7 +76,7 @@ const Main = () => {
                     <td>{user.orgName}</td>
                     <td>{user.userName}</td>
                     <td>{user.email}</td>
-                    <td>{user.phoneNumber}</td>
+                    <td>{user.profile.phoneNumber}</td>
                     <td>{moment(user.createdAt).format("MMMM Do, h:mm a")}</td>
                     <td className="activity">Inactive</td>
                     <td  open={menuOpen}
