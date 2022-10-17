@@ -1,113 +1,43 @@
-import { Title, UserInfo } from "../Data/UsersInfo";
+// import { Title, UserInfo } from "../Data/UsersInfo";
 import "../Styling/_main.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { HiDotsVertical }from "react-icons/hi";
-import moment from "moment";
-import { BsEye } from "react-icons/bs";
-import { FiUserCheck, FiUserX } from "react-icons/fi";
-import { useNavigate } from "react-router-dom";
+// import { HiDotsVertical }from "react-icons/hi";
+// import moment from "moment";
+// import { BsEye } from "react-icons/bs";
+// import { FiUserCheck, FiUserX } from "react-icons/fi";
+// import { useNavigate } from "react-router-dom";
+import User from "./User";
+import Pagination from "./Pagination";
 
 const Main = () => {
-
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activeTable, setActiveTable] = useState(-1);
-
-  const handleMenuClick = (key) => {
-    setActiveTable(key);
-    setMenuOpen(!menuOpen);
-  };
-
   const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [usersPerPage] = useState(15);
 
   useEffect(() => {
-    axios.get("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users").then(res => {
+    const fetchUsers = async () => {
+      setLoading(true);
+      const res = await axios.get("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users");
       setUsers(res.data)
-    }).catch(err => {
-      console.log(err)
-    })
+      setLoading(false);
+    }
+    fetchUsers();
   }, []);
 
-  let detailPage = useNavigate();
-  const handleClick = (id) => {
-    detailPage(`/users/${id}`);
-  };
+    // Get current Users
+    const indexOfLastUser = currentPage * usersPerPage;
+    const indexOfFirstUser = indexOfLastUser - usersPerPage;
+    const currentUser = users.slice(indexOfFirstUser, indexOfLastUser);
+
+      // Change page
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+
   return (
     <>
-      <main>
-        <div>
-          <h1>Users</h1>
-        </div>
-        <div className="user-info">
-          {
-            UserInfo.map(data => {
-              return (
-                <div className="info-cover">
-                  <img className="info-icons" src={data.img} alt={data.alt} />
-                  <h2>{data.title}</h2>
-                  <h3>{data.num}</h3>
-                </div>
-              )
-            })
-          }
-        </div>
-        <div className="user-cover">
-          <table>
-            <thead>
-              <tr>
-            {
-              Title.map(item => {
-                return (
-                  <th className={item.class} key={item.id}>
-                    <div className="t-head">
-                      <p>{item.header}</p>
-                      <img src={item.image} alt="Filter icon" />
-                    </div>
-                  </th>
-                )
-              })
-            }
-            </tr>
-          </thead>
-            {
-              users.map((user, key) => {
-                return (
-                  <tr>
-                    <td>{user.orgName}</td>
-                    <td>{user.userName}</td>
-                    <td className="d-none">{user.email}</td>
-                    <td className="d-none">{user.profile.phoneNumber}</td>
-                    <td className="tel">{moment(user.createdAt).format("MMMM Do, h:mm a")}</td>
-                    <td className="activity d-none">Inactive</td>
-                    <td  open={menuOpen}
-                  handleClick={handleMenuClick}>
-                      <HiDotsVertical onClick={() => handleMenuClick(key)} />
-                      {key === activeTable && (
-                    <div className="pop-up">
-                      <ul>
-                        <li onClick={() => handleClick(user.id)}>
-                          <BsEye />
-                          View Details
-                        </li>
-                        <li>
-                          <FiUserX />
-                          Blacklist User
-                        </li>
-                        <li>
-                          <FiUserCheck />
-                          Activate User
-                        </li>
-                      </ul>
-                    </div>
-                  )}
-                    </td>
-                  </tr>
-                )
-              })
-            }
-            </table>
-        </div>
-      </main>
+      <User users={currentUser} loading={loading} />
+      <Pagination usersPerPage={usersPerPage} totalUsers={users.length} paginate={paginate} />
     </>
   )
 }
