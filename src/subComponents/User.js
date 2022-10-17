@@ -26,7 +26,7 @@ const User = ({ users, loading }) => {
   }
   return (
     <>
-      <main>
+      <main className="main">
         <div>
           <h1>Users</h1>
         </div>

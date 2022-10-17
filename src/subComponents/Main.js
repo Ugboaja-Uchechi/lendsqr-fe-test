@@ -1,12 +1,6 @@
-// import { Title, UserInfo } from "../Data/UsersInfo";
 import "../Styling/_main.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import { HiDotsVertical }from "react-icons/hi";
-// import moment from "moment";
-// import { BsEye } from "react-icons/bs";
-// import { FiUserCheck, FiUserX } from "react-icons/fi";
-// import { useNavigate } from "react-router-dom";
 import User from "./User";
 import Pagination from "./Pagination";
 
@@ -32,12 +26,14 @@ const Main = () => {
     const currentUser = users.slice(indexOfFirstUser, indexOfLastUser);
 
       // Change page
-  const paginate = pageNumber => setCurrentPage(pageNumber);
+    const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
     <>
-      <User users={currentUser} loading={loading} />
-      <Pagination usersPerPage={usersPerPage} totalUsers={users.length} paginate={paginate} />
+      <div style={{ backgroundColor: "#fafafa" }}>
+        <User users={currentUser} loading={loading} />
+        <Pagination usersPerPage={usersPerPage} totalUsers={users.length} paginate={paginate} />
+      </div>
     </>
   )
 }

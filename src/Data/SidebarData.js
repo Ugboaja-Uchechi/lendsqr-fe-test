@@ -24,12 +24,14 @@ const SidebarData = [
     id: 1,
     img: Home,
     name: "Dashboard",
-    header: "Customers"
+    header: "Customers",
+    link: "/dashboard"
   },
   {
     id: 2,
     img: UserFriends,
-    name: "Users"
+    name: "Users",
+    link: "/users"
   },
   {
     id: 3,

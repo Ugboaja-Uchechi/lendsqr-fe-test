@@ -125,6 +125,28 @@ main {
     }
 }
 
+.nav {
+  margin: 0 auto;
+
+  .pagination {
+    display: flex;
+    justify-content: flex-end;
+    width: 72.5em;
+
+    li {
+      list-style-type: none;
+      button {
+        color: $secondary-text-color;
+        font-size: $small-font;
+        font-weight: 500;
+        border: none;
+        background-color: transparent;
+        padding-inline-end: 1rem;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1023px) {
   main {
     width: 100%;
@@ -151,6 +173,17 @@ main {
   .d-none, .none {
     display: none;
   }
+
+  .nav {
+    .pagination {
+      width: auto;
+    }
+  }
+
+  // .nav {
+  //   width: 100%;
+  //   margin-inline-start: 1.7rem;
+  // }
 }
 
 @media screen
@@ -186,5 +219,10 @@ and (max-width: 650px) {
   .tel {
     display: none;
   }
+
+  // .nav {
+  //   width: calc(45% - 20px);
+  //   margin-inline-start: 1.7rem;
+  // }
 
 }
