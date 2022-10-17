@@ -1,7 +1,7 @@
 $primary-text-color: #213F7D;
 $secondary-text-color: #545F7D;
 $small-font: calc(0.4rem + 0.5vw);
-$large-font: calc(0.5rem + 0.8vw);
+$large-font: calc(0.9rem + 1vw);;
 
 main {
   width: calc(16.5em * 5);
@@ -31,11 +31,11 @@ main {
 
     .info-icons {
       margin-block-start: 1rem;
-      width: calc(35% - 30px);
+      // width: calc(35% - 30px);
     }
 
     h2 {
-      font-size: $small-font;
+      font-size: 0.7rem;
       color: $secondary-text-color;
       text-transform: uppercase;
       font-weight: 500;
@@ -123,4 +123,60 @@ main {
       display: flex;
       gap: 13px;
     }
+}
+
+@media screen and (max-width: 1023px) {
+  main {
+    width: 100%;
+
+    h1 {
+      margin-block-start: 1.7rem;
+      margin-block-end: 1.5rem;
+    }
+
+    .user-cover {
+      width: auto;
+      margin-inline-end: 1.6rem;
+    }
+
+    .user-info, .user-cover {
+      margin-inline-start: 1.7rem;
+    }
+  }
+
+  .d-none, .none {
+    display: none;
+  }
+}
+
+@media screen
+and (min-width: 320px)
+and (max-width: 650px) {
+  main {
+    .info-cover {
+      // width: calc(40% - 20px);
+      padding-inline-start: 1.5rem;
+      margin-inline-end: 0.6rem;
+      width: calc(45% - 20px);
+      margin-block-start: 0.5rem;
+    }
+
+    h1, .user-info {
+      margin-inline-start: 0.7rem;
+    }
+
+    .user-info {
+      flex-wrap: wrap;
+    }
+
+    .user-cover {
+      margin-inline-end: 0.6rem;
+      margin-inline-start: 0.6rem;
+    }
+  }
+
+  .tel {
+    display: none;
+  }
+
 }

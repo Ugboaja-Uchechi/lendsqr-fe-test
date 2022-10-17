@@ -118,7 +118,7 @@ const UserDetails = () => {
             <h4 className="bvn">sector of employment</h4>
             <p>{userDetails?.education?.sector}</p>
           </div>
-          <div>
+          <div className="duration">
             <h4 className="bvn">duration of employment</h4>
             <p>{userDetails?.education?.duration}</p>
           </div>
@@ -155,7 +155,7 @@ const UserDetails = () => {
         <div className="header-cover">
           <h2>guarantor</h2>
         </div>
-        <div className="d-flex">
+        <div className="d-flex p-bottom">
           <div className="twitter-cover">
             <h4 className="bvn">full name</h4>
             <p>{userDetails?.guarantor?.firstName} {userDetails?.guarantor?.lastName}</p>

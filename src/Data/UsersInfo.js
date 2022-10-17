@@ -46,22 +46,26 @@ const Title = [
   {
     id: 3,
     header: "email",
-    image: Filter
+    image: Filter,
+    class: "none"
   },
   {
     id: 4,
     header: "phone number",
-    image: Filter
+    image: Filter,
+    class: "none"
   },
   {
     id: 5,
     header: "date joined",
-    image: Filter
+    image: Filter,
+    class: "tel"
   },
   {
     id: 6,
     header: "status",
-    image: Filter
+    image: Filter,
+    class: "none"
   },
 ];
 

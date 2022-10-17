@@ -85,3 +85,26 @@ header {
       margin-inline-end: 2.6rem;
     }
 }
+
+@media screen and (max-width: 1230px) {
+  header {
+    .grid {
+      display: none;
+    }
+    h4 {
+      margin-inline-end: 1rem;
+      margin-inline-start: 1rem;
+    }
+  }
+}
+
+@media screen
+and (min-width: 320px)
+and (max-width: 650px) {
+  header {
+    h4 {
+      margin-inline-end: 1rem;
+      margin-inline-start: 1rem;
+    }
+  }
+}

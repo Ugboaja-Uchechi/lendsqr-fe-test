@@ -58,7 +58,7 @@ const Main = () => {
             {
               Title.map(item => {
                 return (
-                  <th key={item.id}>
+                  <th className={item.class} key={item.id}>
                     <div className="t-head">
                       <p>{item.header}</p>
                       <img src={item.image} alt="Filter icon" />
@@ -75,10 +75,10 @@ const Main = () => {
                   <tr>
                     <td>{user.orgName}</td>
                     <td>{user.userName}</td>
-                    <td>{user.email}</td>
-                    <td>{user.profile.phoneNumber}</td>
-                    <td>{moment(user.createdAt).format("MMMM Do, h:mm a")}</td>
-                    <td className="activity">Inactive</td>
+                    <td className="d-none">{user.email}</td>
+                    <td className="d-none">{user.profile.phoneNumber}</td>
+                    <td className="tel">{moment(user.createdAt).format("MMMM Do, h:mm a")}</td>
+                    <td className="activity d-none">Inactive</td>
                     <td  open={menuOpen}
                   handleClick={handleMenuClick}>
                       <HiDotsVertical onClick={() => handleMenuClick(key)} />
