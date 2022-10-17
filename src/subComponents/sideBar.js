@@ -2,7 +2,6 @@ import Briefcase from "../assests/images/briefcase.svg";
 import { MdArrowDropDown } from "react-icons/md";
 import SidebarData from "../Data/SidebarData";
 import "../Styling/_sideBar.scss";
-import { Link } from "react-router-dom";
 import { VscMenu } from "react-icons/vsc"
 import { useState } from "react";
 
@@ -32,7 +31,7 @@ const SideBar = () => {
                     <img src={sidebar.img} className="img" alt="Icon" />
                   </div>
                   <div>
-                    <Link to={sidebar.link} style={{ textDecoration: "none" }}><h4>{sidebar.name}</h4></Link>
+                    <a href={sidebar.link} style={{ textDecoration: "none" }}><h4>{sidebar.name}</h4></a>
                   </div>
                 </div>
                 <h3>{sidebar.header}</h3>
