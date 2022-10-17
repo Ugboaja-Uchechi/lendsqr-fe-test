@@ -5,14 +5,14 @@ $secondary-font-weight: 500;
 $font-weight: 400;
 $font-size: 1rem;
 
+.menu {
+  display: none;
+}
+
 .side-bar {
   width: calc(3.5em * 5);
   background-color: #fff;
   box-shadow: 3px 0px 20px 0px #0000000A;
-
-  .menu {
-    display: none;
-  }
 
     .flex {
       display: flex;
@@ -33,6 +33,11 @@ $font-size: 1rem;
 
     .m-top {
       margin-block-start: 1.8rem;
+    }
+
+    .m-top:hover {
+      background-color: #5be6e6;
+      cursor: pointer;
     }
 
     h4 {
@@ -66,6 +71,7 @@ $font-size: 1rem;
     margin-left: 1.5rem;
     color: $primary-color;
     font-size: 1.5rem;
+    position: absolute;
   }
 
   .side-bar.active {

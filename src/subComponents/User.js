@@ -8,13 +8,21 @@ import { useNavigate } from "react-router-dom";
 
 const User = ({ users, loading }) => {
 
+  const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeTable, setActiveTable] = useState(-1);
+
+  const handleFilterClick = () => setOpen(!open);
 
   const handleMenuClick = (key) => {
     setActiveTable(key);
     setMenuOpen(!menuOpen);
   };
+
+  // document.onclick = function () {
+  //   setMenuOpen(false);
+  //   setOpen(false);
+  // };
 
   let detailPage = useNavigate();
   const handleClick = (id) => {
@@ -53,13 +61,38 @@ const User = ({ users, loading }) => {
                       <th className={item.class} key={item.id}>
                         <div className="t-head">
                           <p>{item.header}</p>
-                          <img src={item.image} alt="Filter icon" />
+                          <img open={open} onClick={handleFilterClick} src={item.image} alt="Filter icon" />
                         </div>
                       </th>
                     )
                   })
                 }
+                
               </tr>
+              <div className="filter-cover">
+                <form  className={open ? "filter-container active" : "filter-container"} onClick={handleFilterClick}>
+                  <label>Organization</label>
+                  <select name="org" id="org">
+                    <option>Select</option>
+                  </select>
+                  <label>Username</label>
+                  <input placeholder="User" />
+                  <label>Email</label>
+                  <input placeholder="Email" />
+                  <label>Date</label>
+                  <input placeholder="Date" />
+                  <label>Phone Number</label>
+                  <input placeholder="Phone Number" />
+                  <label>Status</label>
+                  <select name="status" id="status" >
+                  <option>Select</option>
+                  </select>
+                  <div>
+                    <button>Reset</button>
+                    <button className="f-btn">Filter</button>
+                  </div>
+                </form>
+              </div>
             </thead>
             {
               users.map((user, key) => {
@@ -97,7 +130,7 @@ const User = ({ users, loading }) => {
                 )
               })
             }
-            </table>
+          </table>
         </div>
       </main>
     </>
