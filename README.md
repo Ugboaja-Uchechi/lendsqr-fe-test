@@ -9,7 +9,7 @@ LendSqr Front-end Assessment
 
 ## ScreenShots
 
-Figma Design | Your Design
+Users Page | Details Page
 ------------- | -------------
 ![image](https://user-images.githubusercontent.com/74814780/196230067-212d93cd-0344-4616-a62d-92f57ce32b73.png)  |  ![image](https://user-images.githubusercontent.com/74814780/196230190-c6634a53-3c3b-40d4-afe2-11db5cce75b0.png)
 
