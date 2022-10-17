@@ -7,9 +7,11 @@ LendSqr Front-end Assessment
 
 [Live Version](https://stephanies-portfolio.netlify.app/)
 
-![image](https://user-images.githubusercontent.com/74814780/196230067-212d93cd-0344-4616-a62d-92f57ce32b73.png)
+## ScreenShots
 
-![image](https://user-images.githubusercontent.com/74814780/196230190-c6634a53-3c3b-40d4-afe2-11db5cce75b0.png)
+Figma Design | Your Design
+------------- | -------------
+![image](https://user-images.githubusercontent.com/74814780/196230067-212d93cd-0344-4616-a62d-92f57ce32b73.png)  |  ![image](https://user-images.githubusercontent.com/74814780/196230190-c6634a53-3c3b-40d4-afe2-11db5cce75b0.png)
 
 
 Below are some features of this project:
@@ -20,6 +22,13 @@ Below are some features of this project:
 Got user details by id from [User Details](https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/:id)
 
 3. Wrote unit tests.
+
+## Getting Started
+
+- Open your terminal or command line
+- Run git clone and paste [this link](https://github.com/Ugboaja-Uchechi/lendsqr-fe-test.git)
+- Open the folder with your code editor
+- Run `npm install` then `npm start` to get it working on your machine
 
 Built with :
 
