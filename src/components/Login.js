@@ -1,16 +1,18 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Logo from "../assests/images/logo.svg";
 import Signin from "../assests/images/sign-in-img.svg";
-import "../login.scss"
+import "../Styling/_login.scss"
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [success, setSuccess] = useState(false);
+
+  let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setSuccess(true);
+    navigate("/dashboard");
   }
   return (
     <>

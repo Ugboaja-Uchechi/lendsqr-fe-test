@@ -1,0 +1,228 @@
+$primary-text-color: #213F7D;
+$secondary-text-color: #545F7D;
+$small-font: calc(0.4rem + 0.5vw);
+$large-font: calc(0.9rem + 1vw);;
+
+main {
+  width: calc(16.5em * 5);
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+
+    h1 {
+      color: $primary-text-color;
+      font-size: $large-font;
+      margin-block-start: 3.7rem;
+      margin-block-end: 2.5rem;
+      margin-inline-start: 3.7rem;
+    }
+
+    .user-info {
+      display: flex;
+      margin-inline-start: 3.7rem;
+    }
+
+    .info-cover {
+      background-color: #fff;
+      width: calc(21% - 20px);
+      padding-inline-start: 1.5rem;
+      margin-inline-end: 1.6rem;
+    }
+
+    .info-icons {
+      margin-block-start: 1rem;
+    }
+
+    h2 {
+      font-size: 0.7rem;
+      color: $secondary-text-color;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-block-end: 0;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: $large-font;
+      color: $primary-text-color;
+      margin-block-start: 0.5rem;
+    }
+
+    .user-cover {
+      background-color: #fff;
+      width: calc(90% - 40px);
+      margin-inline-start: 3.7rem;
+      margin-block-start: 2.5rem;
+      box-shadow: 3px 5px 20px 0px #0000000A;
+    }
+
+    ul, table {
+      padding-inline-start: 1.5rem;
+      padding-block-end: 3.5rem;
+    }
+
+    th {
+      text-align: start;
+      color: $secondary-text-color;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 5px 0;
+      padding-left: 10px;
+    }
+
+    .t-head {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin-inline-end: 0.3rem;
+      }
+    }
+
+    td {
+      border-bottom: 1px solid #213f7d1a;
+      color: $secondary-text-color;
+      text-transform: capitalize;
+      font-size: 0.9rem;
+      font-weight: 400;
+      padding: 7px 10px;
+    }
+
+    .title-cover {
+      display: flex;
+      align-items: center;
+    }
+
+    .pop-up {
+      position: absolute;
+      width: 160px;
+      padding: 20px 0;
+      right: 9rem;
+      height: auto;
+      background: #fff;
+      border: 1px solid rgba(84, 95, 125, 0.04);
+      box-shadow: 3px 5px 20px rgb(0 0 0 / 4%);
+      border-radius: 4px;
+
+        ul {
+          margin: 0;
+          align-items: center;
+          justify-content: space-evenly;
+          padding: 0;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+    }
+
+    li {
+      list-style-type: none;
+      font-size: 0.8rem;
+      display: flex;
+      gap: 13px;
+    }
+}
+
+.nav {
+  margin: 0 auto;
+
+  .pagination {
+    display: flex;
+    justify-content: flex-end;
+    width: 72.5em;
+
+    li {
+      list-style-type: none;
+      button {
+        color: $secondary-text-color;
+        font-size: $small-font;
+        font-weight: 500;
+        border: none;
+        background-color: transparent;
+        padding-inline-end: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  main {
+    width: 100%;
+
+    h1 {
+      margin-block-start: 1.7rem;
+      margin-block-end: 1.5rem;
+    }
+
+    .user-cover {
+      width: auto;
+      margin-inline-end: 1.6rem;
+    }
+
+    .user-info, .user-cover {
+      margin-inline-start: 1.7rem;
+    }
+
+    .pop-up {
+      right: 6rem;
+    }
+  }
+
+  .d-none, .none {
+    display: none;
+  }
+
+  .nav {
+    .pagination {
+      width: auto;
+    }
+  }
+
+  // .nav {
+  //   width: 100%;
+  //   margin-inline-start: 1.7rem;
+  // }
+}
+
+@media screen
+and (min-width: 320px)
+and (max-width: 650px) {
+  main {
+    .info-cover {
+      // width: calc(40% - 20px);
+      padding-inline-start: 1.5rem;
+      margin-inline-end: 0.6rem;
+      width: calc(45% - 20px);
+      margin-block-start: 0.5rem;
+    }
+
+    h1, .user-info {
+      margin-inline-start: 0.7rem;
+    }
+
+    .user-info {
+      flex-wrap: wrap;
+    }
+
+    .user-cover {
+      margin-inline-end: 0.6rem;
+      margin-inline-start: 0.6rem;
+    }
+
+    .pop-up {
+      right: 4rem;
+    }
+  }
+
+  .tel {
+    display: none;
+  }
+
+  // .nav {
+  //   width: calc(45% - 20px);
+  //   margin-inline-start: 1.7rem;
+  // }
+
+}
