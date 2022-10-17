@@ -5,7 +5,7 @@ LendSqr Front-end Assessment
 
 ## live Demo link
 
-[Live Version](https://stephanies-portfolio.netlify.app/)
+[Live Version](https://stephanie-ugboaja-lendsqr-fe-test.vercel.app/)
 
 ## ScreenShots
 
